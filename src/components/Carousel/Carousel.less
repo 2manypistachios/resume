@@ -1,0 +1,57 @@
+@white: #fff;
+
+#app {
+  animation: fadeIn 500ms ease-in-out forwards;
+}
+
+.selectors {
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.1);
+  .selector {
+    transition: background .3s ease-in-out, opacity .3s ease-in-out;
+    &:hover,
+    &.active {
+        background: @white;
+        opacity: 0.9;
+    }
+  }
+}
+
+section.wrapper {
+  background-size: cover;
+  transition: background-image 500ms ease-in-out;
+}
+
+.wrapper-padding {
+  padding-top:70px !important;
+  padding-bottom:70px !important;
+}
+
+
+.panel {
+  z-index:2;
+  box-shadow: 5px 0 25px 0 rgba(0, 0, 0, 0.3);
+  transition: background 500ms ease-in-out;
+  h2.panel-header,
+  p.panel-info {
+    margin: 0;
+    padding: 1.3rem 3.5rem;
+  }
+  h2.panel-header {
+    padding-top: 2em;
+  }
+  button.panel-button {
+    margin: 1.3rem 3.5rem;
+    padding: 0.8em 1.3em;
+    transition: box-shadow 0.5s ease-in-out, color 0.5s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
